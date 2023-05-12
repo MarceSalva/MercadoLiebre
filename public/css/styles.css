@@ -1,0 +1,47 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    }
+
+header {
+    background-color: #EAC926;
+}
+
+header p {
+    text-align: center;
+    }
+
+header nav ul li a{
+    font-size: 12px;
+    text-decoration: none;
+    color:#000
+    }
+
+header nav ul li{
+    list-style-type: none;
+    }
+header .buscador .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 200px;
+}
+
+header .buscador .lupa i{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    
+}
+
+header div.burger-menu i{
+    color:#FFF;
+    background-color: #1259c3;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px 0px 20px 0px;
+    border-radius: 10px;
+}
+
+header div.burger-menu {
+    text-align: center;
+}
