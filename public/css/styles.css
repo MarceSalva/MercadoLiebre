@@ -33,6 +33,24 @@ header .buscador .lupa i{
     
 }
 
+h3 {
+    font-size: 24px;
+    text-decoration: none;
+    color:#000
+    }
+
+.precio{
+    font-size: 18px;
+    text-decoration: none;
+    color:#000
+    }
+
+.desdes{
+    font-size: 16px;
+    text-decoration: none;
+    color:#000
+    }
+
 header div.burger-menu i{
     color:#FFF;
     background-color: #1259c3;
@@ -44,4 +62,17 @@ header div.burger-menu i{
 
 header div.burger-menu {
     text-align: center;
+}
+
+footer .iconosfooter{
+    color:#1259c3;
+    background-color: #FFF;
+    font-size: 2em;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+footer section {
+    text-align: center;
+    
+    
 }
