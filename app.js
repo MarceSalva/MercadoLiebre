@@ -11,3 +11,11 @@ app.listen(3000, () => {
 app.get('/' , (rep, res) => {
     res.sendFile(path.join(__dirname, '/views/home.html'))
 })
+
+app.get('/register' , (rep, res) => {
+    res.sendFile(path.join(__dirname, '/views/register.html'))
+})
+
+app.get('/login' , (rep, res) => {
+    res.sendFile(path.join(__dirname, '/views/login.html'))
+})
