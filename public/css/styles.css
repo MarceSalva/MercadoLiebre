@@ -3,21 +3,24 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    }
+}
 
 body{
     font-family: 'Roboto', sans-serif;
-    }
+}
 
 header {
     background-color: #EAC926;
+    position: fixed;
+    padding: 10px;
+    top: 0;
+    z-index: 1;
 }
 
 .top-header {
     display: flex;
     flex-wrap: wrap;
     padding: 5%;
-    position: fixed;
 }
 
 .logo {
@@ -75,7 +78,7 @@ h3 {
     font-size: 24px;
     text-decoration: none;
     color:#000
-    }
+}
 
 
 header div.burger-menu i{
@@ -91,17 +94,6 @@ header div.burger-menu {
     text-align: center;
 }
 
-footer .iconosfooter{
-    color:#1259c3;
-    background-color: #FFF;
-    font-size: 2em;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
-footer section {
-    text-align: center;
-}
-
 main {
     margin: 0 auto;
     width: 90vw;
@@ -112,15 +104,20 @@ header {
 }
 
 .banner-img {
+    display: block;
+    margin-top:250px;
     width: 100%;
+
 }
 
 main section article {
     margin-bottom: 10px;
+
 }
 
 main section article img {
     width: 100%;
+    transition: all 0.4s;
 }
 
 .info-article {
@@ -130,6 +127,7 @@ main section article img {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    transition: all 0.4s;
 }
 
 .precio{
@@ -155,6 +153,43 @@ main section article div i {
     top: -15px;
 }
 
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #EAC926;
+    color: #03264C;
+    text-align: center;
+}
+
+#footer-icon{
+    font-size: 2em;
+    margin-top: 30px;
+}
+
+#footer-icon:hover{
+    color: #0022AA;
+}
+
+.footer-titulo{
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-descripcion{
+    padding: 0px;
+    margin: 0px;
+    font-size: 18px;
+}
+
+.footer-copyright{
+    margin-top: 30px;
+    font-size: 15px;
+    color: #03264C;
+    font-weight: bold;
+    text-align: center;
+}
 
 .desdes {
     display: none;
@@ -162,7 +197,10 @@ main section article div i {
 
 #formulario-registro {
     background-color: #ebebeb;
-}
+    display: flex;
+    justify-content: center;
+    
+} 
 
 .formularios{
     display: flex;
@@ -178,8 +216,10 @@ form div {
     width: 100%;
 }
 
+
 .campoTexto {
     padding: 5px;
+    width: 100%;
 }
 
 .selecciones {
@@ -194,11 +234,34 @@ form div {
 .botonSubmit{
     background-color: green;
     color: white;
+    border: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    
 }
 
 .botonReset {
     background-color: red;
     color: white;
+    border: none;
+    font-size: 20px;
+    padding: 5px 10px;
+    
+}
+
+.form-register {
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    margin-top: 350px;
+    justify-content: center;
+   
+}
+
+.form-register div {
+    margin-bottom: 10px;
+    border-radius: 5%;
+    width: 100%;
 }
 
 
@@ -213,7 +276,7 @@ form div {
         display: block;
     }
     main section article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        
         width: 45%;
     }
     header nav {
@@ -224,10 +287,71 @@ form div {
     header div.burger-menu{
         display: none;
     }
+
+    #formulario-registro {
+        margin-top: 220px;
+    }
+    
 }
 
 @media (min-width: 769px){
     main section article {
-        width: 22.5%;
+        width: 25%;
+        margin-top: 100px;
+    }
+
+    .top-header{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #formulario-registro {
+        margin-top: 260px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .form-register {
+        width: 50%;
+        text-align: center;
+    }
+
+    .botonSubmit{
+        width: 25%;
+    }
+    
+    .botonReset{
+        width: 25%;
+    }
+
+    .campoTexto{
+        width: 100%;
+    }
+
+    .desc-prod {
+        display: none;
+    }
+
+    .buscador{
+        width: 300px;
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    article:hover .desc-prod {
+        display: block;
+    }
+
+    article:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    article:hover i {
+        transform: rotate(-90deg);
     }
 }
