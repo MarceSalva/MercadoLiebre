@@ -9,35 +9,46 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+.contenedor{
+    background-color: #EAC926;
+}
+
+/* HEADER */
+
 header {
     background-color: #EAC926;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     position: fixed;
-    padding: 10px;
     top: 0;
     z-index: 1;
 }
 
-.top-header {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5%;
-}
-
 .logo {
-    width: 50%;
+    width: 70%;
     padding: 10px;
 }
 
 .buscador {
-    width: 50%;
+    position: relative;
+    width: 45%;
     padding: 5px;
     display: flex;
     align-items: center;
 }
 
+
+input[type="text"]{
+    width: 300px;
+    height: 25px;
+}
+
+
 header p {
     text-align: center;
-    }
+}
 
 header nav {
     display: none;
@@ -46,7 +57,8 @@ header nav {
 header nav ul li a{
     font-size: 12px;
     text-decoration: none;
-    color:#000
+    color:#000;
+    font-weight: 700;
 }
 
 header nav ul li{
@@ -54,18 +66,14 @@ header nav ul li{
 }
 
 header nav ul{
+    width: 45%;
+    margin: 0;
     margin-bottom: 0;
     display: flex;
     justify-content: space-around;
-    width: 42%;
+    width: 35%;
 }
 
-header .buscador .input{
-    background-color: #FFF;
-    border: 1px solid #000;
-    color: #666;
-    width: 200px;
-}
 
 header .buscador .lupa i{
     background-color: #FFF;
@@ -76,27 +84,28 @@ header .buscador .lupa i{
 
 h3 {
     font-size: 24px;
-    text-decoration: none;
-    color:#000
+    text-decoration:underline;
+    color: rgb(8, 8, 80)
 }
 
 
-header div.burger-menu i{
+header div .burger-menu i{
     color:#FFF;
     background-color: #1259c3;
+    display: block;
+    max-width: 100px;
+    text-align: center;
     font-size: 20px;
     padding: 10px;
     margin: 10px 0px 20px 0px;
     border-radius: 10px;
 }
 
-header div.burger-menu {
-    text-align: center;
-}
 
 main {
     margin: 0 auto;
     width: 90vw;
+    text-align: center;
 }
 
 header {
@@ -104,20 +113,18 @@ header {
 }
 
 .banner-img {
-    display: block;
-    margin-top:250px;
     width: 100%;
-
+    margin-top: 120px;
 }
 
 main section article {
     margin-bottom: 10px;
-
+    width: 100%;
+    transition: all 0.5s;
 }
 
 main section article img {
     width: 100%;
-    transition: all 0.4s;
 }
 
 .info-article {
@@ -132,12 +139,20 @@ main section article img {
 
 .precio{
     width: 30%;
-    }
+}
 
 .descuento{
     width: 70%;
-    }
+}
 
+.productos {
+    box-sizing: border-box;
+}
+
+.productos article img {
+    box-sizing: content-box;
+    width: 70%;
+}
 
 main section article div i {
     display: block;
@@ -153,6 +168,17 @@ main section article div i {
     top: -15px;
 }
 
+
+main section article i{
+    transition: all 0.5s;
+}
+
+.h3-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 footer{
     width: 100%;
     height: auto;
@@ -162,7 +188,7 @@ footer{
 }
 
 #footer-icon{
-    font-size: 2em;
+    font-size: 1.5em;
     margin-top: 30px;
 }
 
@@ -191,29 +217,38 @@ footer{
     text-align: center;
 }
 
-.desdes {
-    display: none;
-}
+
+/* Formularios */
 
 #formulario-registro {
     background-color: #ebebeb;
     display: flex;
     justify-content: center;
-    
+   
 } 
 
+#formulario-login {
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    
+} 
 .formularios{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin-top: 25px;
+    padding-top: 160px;
+    margin-bottom: 25px;
+    
 }
 
 form div {
     margin-bottom: 10px;
     border-radius: 5%;
     width: 100%;
+    text-align: center;
 }
 
 
@@ -237,7 +272,7 @@ form div {
     border: none;
     font-size: 20px;
     padding: 5px 10px;
-    
+    transition: all 0.5s;
 }
 
 .botonReset {
@@ -246,23 +281,27 @@ form div {
     border: none;
     font-size: 20px;
     padding: 5px 10px;
-    
+    transition: all 0.5s;
 }
 
-.form-register {
+.formularios {
     background-color: #ebebeb;
     display: flex;
     flex-direction: column;
-    margin-top: 350px;
+    margin-top: auto;
     justify-content: center;
-   
 }
 
-.form-register div {
+.formularios div {
     margin-bottom: 10px;
     border-radius: 5%;
     width: 100%;
 }
+
+.desc-prod {
+    transition: all 0.5s;
+}
+
 
 
 @media (min-width: 361px){
@@ -272,26 +311,46 @@ form div {
         justify-content: space-around;
     }
 
-    .desdes {
-        display: block;
+    .banner-img {
+        width: 100%;
+        margin-top: 178px;
     }
+
     main section article {
-        
         width: 45%;
     }
+
     header nav {
         display: flex;
         justify-content: space-between;
+        width: 100%;
     }
 
     header div.burger-menu{
         display: none;
     }
 
-    #formulario-registro {
-        margin-top: 220px;
+    .buscador {
+        width: 33%;
+        justify-content: space-around;
+    }
+
+    .formularios{
+        padding-top: 210px;
+    }
+
+    .footer-titulo{
+        font-size: 12px;
+        font-weight: bold;
     }
     
+    .footer-descripcion{
+        font-size: 10px;
+    }
+    
+    .footer-copyright{
+        font-size: 8px;
+    }
 }
 
 @media (min-width: 769px){
@@ -304,9 +363,14 @@ form div {
         display: flex;
         flex-direction: row;
     }
+
+    .banner-img {
+        width: 100%;
+        margin-top: 140px;
+    }
     
     #formulario-registro {
-        margin-top: 260px;
+        margin-top: auto;
     }
 
     footer{
@@ -353,5 +417,19 @@ form div {
 
     article:hover i {
         transform: rotate(-90deg);
+    }
+}
+
+@media (min-width: 1200px){
+    .banner-img {
+        width: 100%;
+        margin-top: 140px;
+    }
+
+    footer{
+        width: 100%;
+    }
+    .footer-copyright{
+        width: 100%;
     }
 }

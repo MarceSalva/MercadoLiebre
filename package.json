@@ -8,7 +8,7 @@
     "test": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Marcela Salvatierra",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
